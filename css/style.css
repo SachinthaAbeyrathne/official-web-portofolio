@@ -526,18 +526,18 @@ header {
   .bounce:hover{
       animation: swing 1s ease;
       animation-play-state: running;
-      color: #08fcd7;
+      color : rgb(76, 138, 124);
   }
 
   .bounce3:hover{
     animation: swingvertical 1s ease;
     animation-play-state: running;
-    color: #972775;
+    color : #972775;
 }
 
   .bounce2{
     display: block;
-    /* animation: spin 1s ease infinite; */
+    /* animation: spin 1s ease in; */
     white-space: pre;
     margin-top: 0;
     margin-bottom: 0px;
