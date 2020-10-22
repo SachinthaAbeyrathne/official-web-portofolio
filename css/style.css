@@ -51,6 +51,7 @@ body {
     background: var(--clr-light);
     color: var(--clr-dark);
     margin: 0;
+    overflow-x: hidden;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
@@ -144,6 +145,7 @@ header {
     display: block;
     justify-content: space-between;
     padding: 1em;
+    
 }
 
 .nav {
