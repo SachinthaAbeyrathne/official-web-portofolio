@@ -64,6 +64,11 @@ section {
 img {
     display: block;
     max-width: 100%;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    
+   
+   
 }
 
 strong { font-weight: var(--fw-bold) }
@@ -339,6 +344,9 @@ header {
 
 .about-me__img {
     box-shadow: var(--bs);
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+ 
 }
 
 @media (min-width: 600px) {
@@ -401,6 +409,8 @@ header {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+        image-rendering: auto;
+       
 }
 
 .portfolio__item:focus {
