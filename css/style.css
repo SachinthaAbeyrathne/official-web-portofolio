@@ -110,7 +110,7 @@ strong { font-weight: var(--fw-bold) }
     cursor: pointer;
     font-size: .8rem;
     text-transform: uppercase;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
 
