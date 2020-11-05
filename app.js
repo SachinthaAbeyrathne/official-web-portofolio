@@ -41,7 +41,7 @@ db.add({
 });
 });
 
-var r = submitBtn(Successful Message!);
+var r = submitBtn("Successful Message!");
 if (r == true){
   window.location.reload();
 }
