@@ -18,7 +18,7 @@ function findDate(){
         christmasYear += 1; 
     }
 
-    let christmasTime = new Date(christmasYear, 01, 01); 
+    let christmasTime = new Date(christmasYear, 0, 01); 
     let dateDiff = Math.floor(christmasTime - currentTime);
 
     let DAYS = 0, HOURS = 0, MINUTES = 0, SECONDS = 0;
