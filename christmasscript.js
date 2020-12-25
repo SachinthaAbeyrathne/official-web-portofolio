@@ -14,7 +14,7 @@ function findDate(){
         christmasYear = currentTime.getFullYear();
 
     // getMonth() method returns the month (from 0 to 11)
-    if(currentTime.getMonth() == 0 && currentTime.getDate() > 01){
+    if(currentTime.getMonth() == 0 && currentTime.getDate() > 1){
         christmasYear += 1; 
     }
 
@@ -23,7 +23,7 @@ function findDate(){
 
     let DAYS = 0, HOURS = 0, MINUTES = 0, SECONDS = 0;
 
-    if(currentTime.getMonth() != 0 || (currentTime.getMonth() == 0 && currentTime.getDate() != 01)){
+    if(currentTime.getMonth() != 0 || (currentTime.getMonth() == 0 && currentTime.getDate() != 1)){
         DAYS = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
         HOURS = Math.floor((dateDiff) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
         MINUTES = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
