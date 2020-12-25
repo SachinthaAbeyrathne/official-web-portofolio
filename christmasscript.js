@@ -4,7 +4,7 @@ const days = document.getElementById('days'),
       minutes = document.getElementById('minutes'),
       hours = document.getElementById('hours'),
       seconds = document.getElementById('seconds');
-let xYear = 2020;
+let xYear = 2021;
 setInterval(() => {
     findDate();
 }, 1000);
@@ -14,7 +14,7 @@ function findDate(){
         christmasYear = currentTime.getFullYear();
 
     // getMonth() method returns the month (from 0 to 11)
-    if(currentTime.getMonth() == 01 && currentTime.getDate() > 01){
+    if(currentTime.getMonth() == 0 && currentTime.getDate() > 01){
         christmasYear += 1; 
     }
 
