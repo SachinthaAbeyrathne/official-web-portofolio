@@ -23,7 +23,7 @@ function findDate(){
 
     let DAYS = 0, HOURS = 0, MINUTES = 0, SECONDS = 0;
 
-    if(currentTime.getMonth() != 11 || (currentTime.getMonth() == 11 && currentTime.getDate() != 25)){
+    if(currentTime.getMonth() != 0 || (currentTime.getMonth() == 0 && currentTime.getDate() != 01)){
         DAYS = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
         HOURS = Math.floor((dateDiff) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
         MINUTES = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
