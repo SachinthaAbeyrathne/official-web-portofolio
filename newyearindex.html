@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy New year | Sachintha Abeyrathne </title>
+	<link rel="stylesheet" type="text/css" href="happynewyearstyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="main">
+			<p id="title">&#10077;&nbsp;get ready for new year 2021&nbsp;&#10078;</p>
+              
+            <!-- showing days, hours, minutes & seconds -->         
+			<ul>
+				<li><p id="d">01</p>
+				</li>
+
+				<li>:</li>
+
+				<li><p id="h">10</p>
+				</li>
+                    
+                 <li>:</li>   
+
+				<li><p id="m">31</p>
+				</li>
+
+                <li>:</li>
+
+				<li><p id="s">02</p>
+				</li>
+			</ul><br> 
+<br> <h2>I Wish You a Very Happy New Year !</h2>
+<h3>-Sachintha Abeyrathne</h3>
+<br><br> <br>     <a href="index.html">Back To Homepage</a>
+            <!-- social icons -->
+
+             <div class="social">
+				<a class="social-list__link" href="https://www.facebook.com/SachinthaAbeyrathneofficial"> <i class="fa fa-facebook" aria-hidden="true" href="https://www.facebook.com/SachinthaAbeyrathneofficial"></i></a>
+					 <a class="social-list__link" href="https://twitter.com/SachinthaAbey"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+					 <a class="social-list__link" href="https://github.com/SachinthaAbeyrathne"><i class="fa fa-github" aria-hidden="true"></i></a>
+             </div>
+
+		</div>
+
+
+<!-- javascript part -->
+ <script type="text/javascript">
+    let days_show = document.querySelector('#d');
+    let hours_show = document.querySelector('#h');
+    let minutes_show = document.querySelector('#m');
+    let seconds_show = document.querySelector('#s');
+    let ul = document.querySelector("ul");
+    let title = document.querySelector('#title');
+
+    //set time
+ 	let new_year_date = new Date('Jan 1, 2021 00:00:00').getTime();
+    
+    //create a function (update)
+ 	let timer = setInterval(update,1000);
+
+    //This function will updated every 1 second
+    function update(){
+    	
+    	//present time
+       	let present_time = new Date().getTime();
+
+       	//remaining time
+ 	    let remaining_time = new_year_date - present_time;
+ 	    
+ 	    //count remaining days, hours, minutes & seconds
+ 	    let days = Math.floor(remaining_time / (1000*60*60*24));
+ 	    let hours = Math.floor(remaining_time % (1000*60*60*24) / (1000*60*60));
+ 	    let minutes = Math.floor(remaining_time % (1000*60*60) / (1000*60));
+ 	    let seconds = Math.floor(remaining_time % (1000*60) / (1000));
+        
+        //checking odd number
+        if(seconds % 2 !== 0){
+            seconds_show.style.color = "#FFFF99";
+         }else{
+         	seconds_show.style.color = "rgba(245,245,245,0.5)";
+         }
+
+        //show time
+ 	    days_show.innerHTML = days + " d";
+ 	    hours_show.innerHTML = hours + " h";
+ 	    minutes_show.innerHTML = minutes + " m";
+ 	    seconds_show.innerHTML = seconds + " s";
+
+        //function will run when time is done
+ 	    if (remaining_time <= 0){
+ 	    	clearInterval(timer);
+ 	      ul.style.display = "none";
+ 	      title.innerHTML = "happy new year&nbsp;&#128522;";
+ 	    }
+
+    }
+
+ </script>
+
+</body>
+</html>
