@@ -2,7 +2,7 @@ const days = document.getElementById('days'),
       minutes = document.getElementById('minutes'),
       hours = document.getElementById('hours'),
       seconds = document.getElementById('seconds');
-let xYear = 2022;
+let xYear = 2021;
 setInterval(() => {
     findDate();
 }, 1000);
