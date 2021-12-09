@@ -2,7 +2,7 @@ const days = document.getElementById('days'),
       minutes = document.getElementById('minutes'),
       hours = document.getElementById('hours'),
       seconds = document.getElementById('seconds');
-let xYear = 2022;
+let xYear = 2021;
 setInterval(() => {
     findDate();
 }, 1000);
@@ -12,16 +12,16 @@ function findDate(){
         christmasYear = currentTime.getFullYear();
 
     // getMonth() method returns the month (from 0 to 11)
-    if(currentTime.getMonth() == 0 && currentTime.getDate() > 1){
+    if(currentTime.getMonth() == 11 && currentTime.getDate() > 25){
         christmasYear += 1; 
     }
 
-    let christmasTime = new Date(christmasYear, 0, 01); 
+    let christmasTime = new Date(christmasYear, 11, 25); 
     let dateDiff = Math.floor(christmasTime - currentTime);
 
     let DAYS = 0, HOURS = 0, MINUTES = 0, SECONDS = 0;
 
-    if(currentTime.getMonth() != 0 || (currentTime.getMonth() == 0 && currentTime.getDate() != 1)){
+    if(currentTime.getMonth() != 11 || (currentTime.getMonth() == 11 && currentTime.getDate() != 25)){
         DAYS = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
         HOURS = Math.floor((dateDiff) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
         MINUTES = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
@@ -58,5 +58,3 @@ function check(){
     let d = Math.floor(h / 24);
     h %= 24;
     console.log(d, h, m, s);
-}
-*/
